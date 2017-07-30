@@ -9,6 +9,8 @@ import Sound.Tidal.MIDI.Control
 
 jjdController :: ControllerShape
 jjdController = ControllerShape { controls = [
+
+							--bc = BitCrush
 							mCC bcbd_p 32,
 							mCC	bcsn_p 33,
 							mCC bchc_p 34,
@@ -18,6 +20,7 @@ jjdController = ControllerShape { controls = [
 							mCC bcfx3_p 38,
 							
 							
+							--fq = frequency
 							mCC fqbd_p 48,
 							mCC	fqsn_p 49,
 							mCC fqhc_p 50,
@@ -27,22 +30,24 @@ jjdController = ControllerShape { controls = [
 							mCC fqfx3_p 54,
 							
 							
-							mCC stbd_p 65,
-							mCC	stsn_p 66,
-							mCC sthc_p 67,
-							mCC stho_p 68,
-							mCC stfx1_p 69,
-							mCC stfx2_p 70,
-							mCC stfx3_p 71,
+							--st = start
+							mCC stbd_p 64,
+							mCC	stsn_p 65,
+							mCC sthc_p 66,
+							mCC stho_p 67,
+							mCC stfx1_p 68,
+							mCC stfx2_p 69,
+							mCC stfx3_p 70,
 							
 							
-							mCC lpbd_p 81,
-							mCC	lpsn_p 82,
-							mCC lphc_p 83,
-							mCC lpho_p 84,
-							mCC lpfx1_p 85,
-							mCC lpfx2_p 86,
-							mCC lpfx3_p 87
+							--lp = looping (>64 ON, <=64 OFF)
+							mCC lpbd_p 80,
+							mCC	lpsn_p 81,
+							mCC lphc_p 82,
+							mCC lpho_p 83,
+							mCC lpfx1_p 84,
+							mCC lpfx2_p 85,
+							mCC lpfx3_p 86
 							
                           ],
                          latency = 0.01
